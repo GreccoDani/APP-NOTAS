@@ -1,0 +1,26 @@
+ *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: aliceblue;
+    background-color: #5aaecd;
+}
+
+h1{
+text-align: center;
+margin-top: 40px;
+font-family: poppins;
+font-weight: 500;
+}
+
+img{
+margin: 10px;
+width: 70px;
+}
