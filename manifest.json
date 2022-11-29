@@ -3,7 +3,7 @@
     "name": "Aplicacion de notas",
     "short_name": "App notas",
     "start_url": "index.html",
-    "theme_color": "",
+    "theme_color": "#2C3333",
     "background_color": "#fff",
     "description": "Aplicacion de notas",
     "display": "standalone",

@@ -6,7 +6,9 @@ self.addEventListener('install', function(e){
             'app.js',
             'index.html',
             'notas.png',
-            // 'style.css'
+            'style.css',
+            'clase.js',
+            'nombre.js'
         ])
     })
 

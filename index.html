@@ -7,22 +7,85 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="notas.png" type="image/x-icon">
     <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#5aaecd">
+    <!-- <script src="./nombre.js"></script> -->
+    <script src="clase.js"></script>
     <title>App notas</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div>
-                <a href="./index.html"><img src="notas.png" alt="Notas"></a>
-            </div>
-
-        </nav>
-       <h1>Aplicacion de notas</h1>
+    <header>      
+        <h1 class="saludo"> </h1>
+        <h2 class="fecha"> </h2>
     </header>
    
+    <h3 class="misNotas">Mis notas</h3>
 
+    <div class="contenedorNotas">
+
+
+    </div>
+    <section>
+        <div class="ventana-modal">
+    
+            <div class="caja-modal">
+
+                <div class="cajaCerrarModal">
+                   <p class="cerrarModal"> X </p>
+                </div>
+                
+                <h2>Nueva nota</h2>
+                <p>Ingresa una nueva nota</p>
+    
+                <form >
+                    <label for="nota">Nota</label>
+                    <input type="text" name="nota" id="nota">
+
+                    <label for="categoria">Categoría</label>
+                   <select name="categoria" id="categoria">
+
+                    <option selected> Seleccionar </option>
+                    <option value="Actividades">Actividades</option>
+                    <option value="Mercado">Mercado</option>
+                    <option value="Indumentaria">Indumentaria</option>
+                    <option value="Ocio">Ocio</option>
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Escuela">Escuela</option>
+                    <option value="Otro">Otro</option>
+
+                   </select>
+
+                    <button class="btnGuardar" type="submit"> Agregar </button>
+                </form>
+            </div>
+        </div>
+
+<div class="cajaBtn">
+      <img id="mas" src="/mas.png" alt="Bton mas"> 
+</div>
+    </section>
+   
+
+
+    <!-- <section>
+        <div class="ventana-modal">
+            <div class="caja-modal">
+
+                <div class="cajaCerrarModal">
+                   <p class="cerrarModal"> X </p>
+                </div>
+    
+                <form >
+                    <label for="nombre">Ingresá tu nombre</label>
+                    <input type="text" name="nombre" id="nombre">
+ 
+                    <button class="btnGuardar" type="submit"> Agregar </button>
+                </form>
+            </div>
+        </div>
+    </section> -->
+    
+    
     <script src="app.js"></script>
+  
 </body>
 </html>

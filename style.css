@@ -1,26 +1,330 @@
- *{
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&family=Poppins&family=Roboto:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Poppins:wght@100;200;300;500&family=Roboto&display=swap');
+
+*{
 margin: 0;
 padding: 0;
 box-sizing: border-box;
 }
+ 
 
-nav {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+header {
+    font-family: poppins;
+    font-weight: 700;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: star;
+    flex-direction: column;
     color: aliceblue;
-    background-color: #5aaecd;
+    background-color: #2C3333;
+    padding: 20px;
 }
 
-h1{
-text-align: center;
-margin-top: 40px;
-font-family: poppins;
-font-weight: 500;
+.fecha{
+
+    font-size: 1rem;
+    font-weight: 300;
+
 }
+
+.misNotas{
+    font-size: 1.5rem;
+    text-align: start;
+    color: rgb(36, 36, 36);
+    margin-top: 10px;
+    font-family: poppins;
+    font-weight: 500;
+    padding: 20px;
+}
+
 
 img{
 margin: 10px;
-width: 70px;
+width: 50px;
+margin: 5px;
+padding-left: 3px;
+}
+
+
+
+.ventana-modal{
+display: flex;
+ position: fixed;
+ top: 0;
+ bottom: 0;
+ right: 0;
+ left: 0;
+background-color: rgba(0, 0, 0, 0.195);
+width: 100%;
+height: 100vh;
+display: none;
+ z-index: 1;
+}
+ 
+ .caja-modal{
+    font-family: poppins;
+    margin: 200px auto;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    height: auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 10px 9px 29px 3px rgba(0,0,0,0.48);
+    -webkit-box-shadow: 10px 9px 29px 3px rgba(0,0,0,0.48);
+    -moz-box-shadow: 10px 9px 29px 3px rgba(0,0,0,0.48);
+    
+}
+
+ 
+.caja-modal p{
+text-align: start; 
+}
+
+
+.caja-modal form {
+display: flex;
+flex-direction: column;
+}
+
+.caja-modal form label{
+text-align: start;
+font-size: 20px;
+margin-top: 13px;
+}
+
+.caja-modal form input,select {
+
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid green;
+    outline: none;
+    font-family: poppins;
+    }
+
+    .caja-modal form button {
+    
+        margin:15px auto;
+        width: 100px;
+        padding: 6px;
+        border-radius: 8px;
+        border: 2px solid rgb(43, 107, 192);
+        background-color: rgb(43, 107, 192);
+        color: white;
+        cursor: pointer;
+        transition: all .4s ease;
+    }
+
+    .caja-modal form button:hover{
+        background-color: rgb(60, 158, 250);
+        
+    }
+
+    .cajaBtn{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        cursor: pointer;
+         
+    }
+
+    .cajaCerrarModal{
+    width: 100%;
+   position: relative;
+   left: 220px;
+   top: -20px;
+    }
+
+    .cerrarModal{
+        cursor: pointer;
+        width:35px;
+        height: 35px;
+        padding-left:10px ;
+        padding-top: 2px;
+        border-radius: 100px;
+        background-color: rgba(255, 0, 0, 0.68);
+        color: white;
+        font-size: 20px;
+        font-family: poppins;
+         border: 1px solid rgba(255, 0, 0, 0.581);
+    }
+
+    .cerrarModal p{
+    margin: 10px;
+    }
+
+    .cajaBtn img{
+    width: 50px;
+    transition: all .5 ease;
+   
+    }
+
+    .cajaBtn img:hover{
+        -moz-transform: translate(0px, -8px);
+        -webkit-transform: translate(0px, -8px);
+        -o-transform: translate(0px, -8px);
+        -ms-transform: translate(0px, -8px);
+        transform: translate(0px, -8px);
+        }
+
+    /* estilos tarjetas */
+
+    .contenedorNotas{
+    display: flex;
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column; 
+    }
+
+    .contNota{
+    max-width: 318px;
+    width: 96%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: poppins;
+    color: rgb(10, 10, 10);
+    border-radius: 20px;
+    background-color: #1976d2;
+    margin: 5px auto;
+    
+    }
+
+    .categ{
+        font-size: 20px;
+        text-align: start;
+        font-weight: 800;
+    }
+
+    .conImg{
+    margin-left: 10px;
+    }
+
+    .contCategoria{
+        margin-right: 10px;
+    }
+.contMensaje{
+width: 100%;
+padding: 12px;
+}
+    .valorNota{
+        width: 100%;
+    text-align: start;
+    height: 70px;
+    color: black;
+    font-weight: 200;
+    }
+
+    .contCat{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+    }
+ 
+    .contHora{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    .notaHora{
+    font-size: 13px;
+    margin: 5px 10px;
+    }
+
+   .btnEliminar{
+    width: 29px;
+    height: 26px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+ 
+ 
+
+.imgCategoria{
+    width: 40px;
+    height: 40px;
+    margin: 10px 15px 10px  -5px;
+
+}
+
+@media screen and (min-width:375px) {
+ 
+    .contenedorNotas{
+        display: flex;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column; 
+        }
+    
+        .contNota{
+        max-width: 218px;
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-family: poppins;
+        color: rgb(10, 10, 10);
+        border-radius: 20px;
+        background-color: #1976d2;
+        margin: 5px auto;
+        
+        }
+        .categ{
+            font-size: 16px;
+            text-align: start;
+            font-weight: 800;
+        }
+}
+
+@media screen and (min-width:894px) {
+
+    .contenedorNotas{
+        display: flex;
+      
+        /* grid-template-columns: 50% 50%; */
+        width: 100%;
+        justify-content: stretch;
+        flex-direction: row; 
+        margin: 5px auto;
+        }
+
+        .contNota{
+            max-width: 218px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: poppins;
+            color: rgb(10, 10, 10);
+            border-radius: 20px;
+            background-color: #1976d2;
+            margin: 5px auto;
+            
+            }
+
+            .categ{
+                font-size: 20px;
+                text-align: start;
+                font-weight: 800;
+            }
+ 
+    /* .contNota{
+        margin: 10px auto;
+        width: 700px;
+    max-width: 700px;
+    } */
+    
 }
