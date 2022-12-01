@@ -1,7 +1,8 @@
 class Nota{
-    constructor(nombre,categoria){
+    constructor(nombre,categoria,hora){
     this.nombre = nombre;
     this.categoria = categoria;
+    this.hora = hora;
     }
     
     
@@ -20,7 +21,13 @@ set setCategoria(categoria){
     get getCategoria(){
     return this.categoria;
     }
-
+    set setHora(hora){
+        this.hora = hora;
+        }
+        
+        get getHora(){
+        return this.hora;
+        }
     }
 
     

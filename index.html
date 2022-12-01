@@ -13,17 +13,29 @@
 </head>
 
 <body>
-    <header>      
-        <h1 class="saludo"> </h1>
-        <h2 class="fecha"> </h2>
+    <header class="header">
+        <div>
+            <div>
+                <h1 class="saludo"> </h1>
+            </div>      
+            <div>
+                <h2 class="fecha"> </h2>
+            </div>
+        </div>
+        <div class="diaYnoche">
+            
+        </div>
     </header>
-   
+
+   <section>
     <h3 class="misNotas">Mis notas</h3>
 
     <div class="contenedorNotas">
 
 
     </div>
+   </section>
+   
     <section>
         <div class="ventana-modal">
     
@@ -33,17 +45,18 @@
                    <p class="cerrarModal"> X </p>
                 </div>
                 
-                <h2>Nueva nota</h2>
-                <p>Ingresa una nueva nota</p>
+              
+                <!-- <p>Ingresa una nueva nota</p> -->
     
                 <form >
-                    <label for="nota">Nota</label>
+                    <label for="nota">Ingresar nota</label>
                     <input type="text" name="nota" id="nota">
+                    <p class="error"></p>
 
                     <label for="categoria">Categoría</label>
                    <select name="categoria" id="categoria">
 
-                    <option selected> Seleccionar </option>
+                    <option selected>   </option>
                     <option value="Actividades">Actividades</option>
                     <option value="Mercado">Mercado</option>
                     <option value="Indumentaria">Indumentaria</option>
@@ -53,9 +66,10 @@
                     <option value="Otro">Otro</option>
 
                    </select>
-
+                   <p class="error1"></p>
                     <button class="btnGuardar" type="submit"> Agregar </button>
                 </form>
+               
             </div>
         </div>
 
