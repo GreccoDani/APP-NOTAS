@@ -8,7 +8,7 @@ self.addEventListener('install', function(e){
             'notas.png',
             'style.css',
             'clase.js',
-            'nombre.js'
+             'sw.js'
         ])
     })
 
