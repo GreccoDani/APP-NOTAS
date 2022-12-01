@@ -1,13 +1,4 @@
-// document.addEventListener('DOMContentLoaded',()=>{
-
-// let nombre;
-
-// if(nombre == null){
-
-
-
-// }else {
-
+ 
     navigator.serviceWorker.register('sw.js');
 
     //MODAL
@@ -36,6 +27,7 @@
     let imgDiaNoche = document.querySelector('.diaYnoche');
     let saludo = document.querySelector('.saludo');
     let fechaSemana = document.querySelector('.fecha');
+  
     
     let fecha = new Date();
     
@@ -150,21 +142,15 @@
             error1.textContent = ``;
             let notas = new Nota(valorNota, valorCategoria,valorHora);
             misNotas.push(notas);
-            // traerDatos();    
             localStorage.setItem("notas", JSON.stringify(misNotas));    
             mostrarNotas();
             console.log(misNotas);
-        
-           
 
             function modalClose(){
                 ventanaModal.style.display = "none";
-            }
-            
+            }   
             modalClose();
         }
-
-      
     })
     
     function leerNotas() {
@@ -175,7 +161,6 @@
         } else{
         misNotas = [];
         }
-    
         mostrarNotas();
     }
     
@@ -184,7 +169,7 @@
     function mostrarNotas(){
     
             contenedorNotas.innerText = "";
-        
+             
             misNotas.forEach(nota => {
     
             console.log(nota)
@@ -220,15 +205,8 @@
             let hrCont = document.createElement('div');
             let notaHora = document.createElement("p");
                 notaHora.classList = 'notaHora';
-    
                 notaHora.textContent = nota.hora;
-    
-            //   if(hora >= 0 && hora < 12){
-            
-            //     notaHora.textContent = `${horaNota}:${minutosNota} AM`;
-            // } else {
-            //     notaHora.textContent = `${horaNota}:${minutosNota} PM`;
-            // }
+     
     
              let elimCont = document.createElement('div');
              let eliminar = document.createElement("img");
@@ -315,9 +293,4 @@
               
         }
         
-
-// }
-
-
-
-// })
+ 
