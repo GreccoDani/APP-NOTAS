@@ -8,6 +8,7 @@
     const cerrarModal = document.querySelector('.cerrarModal');
     
       mas.addEventListener('click',()=>{
+      
         ventanaModal.style.display = "block";
         
         })
@@ -15,7 +16,8 @@
         
       cerrarModal.addEventListener('click',()=>{
         ventanaModal.style.display = "none";
-         
+        valorCategoria.textContent = '';
+        valorNota.textContent = '';
         })
         
     //------------------MODAL-FIN----------------
@@ -114,9 +116,10 @@
         console.log(hsYmin);
      
     btnGuardar.addEventListener('click', (e)=>{
+
         e.preventDefault()
-    
         let valorNota = nota.value;
+    
         let valorCategoria = categoria.value;
         let valorHora = hsYmin;
         let error = document.querySelector('.error');
@@ -128,15 +131,12 @@
             error.style.color = 'red';
             error.style.backgroundColor = '#ff00004a';
 
-         
-
         } else if(valorCategoria == ''){
             error1.textContent = `Falta ingresar un valor`;
             error1.style.color = 'red';
             error1.style.backgroundColor = '#ff00004a';
         }
           else {
-        
         
             error.textContent = ``;
             error1.textContent = ``;
@@ -146,13 +146,19 @@
             mostrarNotas();
             console.log(misNotas);
 
+
             function modalClose(){
                 ventanaModal.style.display = "none";
             }   
             modalClose();
         }
+
+        valorNota.textContent = ``;
+        valorCategoria.textContent = ``;
     })
     
+
+
     function leerNotas() {
         let lista = JSON.parse(localStorage.getItem("notas"));
         
@@ -163,6 +169,9 @@
         }
         mostrarNotas();
     }
+
+
+
     
     //    MOSTRAR DATOS
     
